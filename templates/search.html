@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background-position-y: unset;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+
+
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+
+        form {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+            width: 50%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Financial Book Recommendation System</h1>
+    <!-- <img class="image" src="{{ url_for('static', filename='bookshelf.jpg') }}" alt=""> -->
+    <form action="/search" method="post">
+        <label for="search_term">Enter a financial book that you have read:</label>
+        <input type="text" id="search_term" name="search_term" required>
+        <input type="submit" value="Search">
+    </form>
+</body>
+
+</html>
